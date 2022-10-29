@@ -1,7 +1,7 @@
 {
-  "name": "date-picker",
-  "version": "0.1.0",
-  "private": true,
+  "name": "my-datepicker-test",
+  "version": "0.1.7",
+  "private": false,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -43,5 +43,21 @@
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jennifer93150/datepicker-test.git"
+  },
+  "keywords": [
+    "react",
+    "datepicker"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jennifer93150/datepicker-test/issues"
+  },
+  "homepage": "https://github.com/Jennifer93150/datepicker-test#readme"
 }

@@ -56,7 +56,7 @@ export default function DatePicker() {
 
     return (
         <div>
-            <input value={inputValue}  onClick={handleClick} onChange={handleChange} type="text" className="form-control"/>
+            <input value={inputValue} onClick={handleClick} onChange={handleChange} type="text" className="form-control"/>
             {open ? (
                 <CalendarWrapper >
                     <Calendar onChange={onChange} value={calendarValue}/>
