@@ -1,13 +1,15 @@
 import { React, useState } from "react";
+import PropTypes from 'prop-types';
 
 import Calendar from 'react-calendar';
 import "react-calendar/dist/Calendar.css";
 import styled from "styled-components";
 
 const CalendarWrapper = styled.div`
-  margin: 20px;
-  inset: 0px auto auto 0px;
-  transform: translate3d(-18px, 20px, 0px);
+    position: absolute;
+    margin: 20px;
+    inset: 0px auto auto 0px;
+    transform: translate3d(-18px, 20px, 0px);
 `;
 
 /**
