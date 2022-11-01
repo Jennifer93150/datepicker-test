@@ -1,6 +1,7 @@
-import { React } from "react";
+import React, { useState } from "react";
 
 import DatePicker from './DatePicker';
+import Test from './Test';
 import styled from "styled-components";
 
 const DatePickerContainer = styled.main`
@@ -12,7 +13,8 @@ export default function App() {
   
   return (
     <DatePickerContainer>
-      <DatePicker />
+      {/* <DatePicker/> */}
+      <Test/>
     </DatePickerContainer>
   );
 }
