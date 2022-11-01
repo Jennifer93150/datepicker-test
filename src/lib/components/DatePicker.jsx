@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-import PropTypes from 'prop-types';
 
 import Calendar from 'react-calendar';
 import "react-calendar/dist/Calendar.css";
@@ -23,7 +22,6 @@ export default function DatePicker() {
     const [changeInput, setChangeInput]= useState(false);
     const dateInputString = new Date();
     const todaysDateInNumbers = date.toLocaleDateString();
-
 
     if (dateInput){
         const words = dateInput.split('/');
@@ -66,7 +64,10 @@ export default function DatePicker() {
             
             {openCalendar ? (
                 <CalendarWrapper >
-                    <Calendar onChange={onChange} value={calendarValue}/>
+                    <Calendar 
+                    onChange={onChange} 
+                    value={calendarValue}
+                    />
                 </CalendarWrapper>
                     
             ): null}
