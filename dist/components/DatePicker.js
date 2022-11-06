@@ -1,11 +1,12 @@
 "use strict";
 
+import React, {useState} from 'react';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = DatePicker;
 require("core-js/modules/web.dom-collections.iterator.js");
-var _react = require("react");
+//var _react = require("react");
 var _reactCalendar = _interopRequireDefault(require("react-calendar"));
 require("react-calendar/dist/Calendar.css");
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -17,11 +18,11 @@ const CalendarWrapper = _styledComponents.default.div(_templateObject || (_templ
 /**
  * Component datapicker
  */
-function DatePicker(props) {
-  const [date, setDate] = (0, _react.useState)(new Date());
-  const [dateInput, setDateInput] = (0, _react.useState)();
-  const [openCalendar, setOpenCalendar] = (0, _react.useState)(false);
-  const [changeInput, setChangeInput] = (0, _react.useState)(false);
+ export default function DatePicker(props) {
+  const [date, setDate] = (0, useState)(new Date());
+  const [dateInput, setDateInput] = (0, useState)();
+  const [openCalendar, setOpenCalendar] = (0, useState)(false);
+  const [changeInput, setChangeInput] = (0, useState)(false);
   const dateInputString = new Date();
   const todaysDateInNumbers = date.toLocaleDateString();
   if (dateInput) {
@@ -51,12 +52,12 @@ function DatePicker(props) {
   };
   const inputValue = dateInput && changeInput ? dateInput : todaysDateInNumbers;
   const calendarValue = dateInput && !dateInput.length < 10 && changeInput ? dateInputString : date;
-  return /*#__PURE__*/_react.React.createElement("div", null, /*#__PURE__*/_react.React.createElement("input", {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("input", {
     value: inputValue,
     type: "text",
     onClick: handleClick,
     onChange: handleChange
-  }), openCalendar ? /*#__PURE__*/_react.React.createElement(CalendarWrapper, null, /*#__PURE__*/_react.React.createElement(_reactCalendar.default, {
+  }), openCalendar ? /*#__PURE__*/React.createElement(CalendarWrapper, null, /*#__PURE__*/React.createElement(_reactCalendar.default, {
     onChange: onChange,
     value: calendarValue
   })) : null);

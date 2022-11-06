@@ -1,6 +1,6 @@
 {
   "name": "my-datepicker-test",
-  "version": "0.2.9",
+  "version": "0.3.1",
   "private": false,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
