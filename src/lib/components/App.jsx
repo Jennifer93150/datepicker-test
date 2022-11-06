@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import DatePicker from './DatePicker';
 import styled from "styled-components";
@@ -9,10 +9,12 @@ const DatePickerContainer = styled.main`
 `;
 
 export default function App() {
-  
+  function onChange(value) {
+    return value
+  }
   return (
     <DatePickerContainer>
-      <DatePicker/>
+      <DatePicker onChange={onChange} />
     </DatePickerContainer>
   );
 }

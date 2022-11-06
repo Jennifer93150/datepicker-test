@@ -14,8 +14,8 @@ const CalendarWrapper = styled.div`
 /**
  * Component datapicker
  */
-export default function DatePicker() {
-   
+export default function DatePicker(props) {
+    
     const [date, setDate] = useState(new Date());
     const [dateInput, setDateInput] = useState();
     const [openCalendar, setOpenCalendar]= useState(false);
@@ -44,6 +44,7 @@ export default function DatePicker() {
         setChangeInput(true)
         if(e.target.value.length === 10){
             setOpenCalendar(false);
+            props.onChange(e.target.value)
         }
     }
     
