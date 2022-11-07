@@ -7,8 +7,7 @@ import styled from "styled-components";
 const CalendarWrapper = styled.div`
     position: absolute;
     margin: 20px;
-    inset: 0px auto auto 0px;
-    transform: translate3d(-18px, 20px, 0px);
+    transform: translate3d(-28px, 0px, 0px);
 `;
 
 /**
@@ -37,6 +36,7 @@ export default function DatePicker(props) {
         setDate(date);
         setOpenCalendar(false);
         setChangeInput(false);
+        props.onClick(date);
     }
 
     const handleChange = (e) => {
@@ -44,7 +44,7 @@ export default function DatePicker(props) {
         setChangeInput(true)
         if(e.target.value.length === 10){
             setOpenCalendar(false);
-            props.onChange(e.target.value)
+            props.onChange(e.target.value);
         }
     }
     

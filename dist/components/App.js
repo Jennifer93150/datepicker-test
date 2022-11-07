@@ -15,7 +15,11 @@ function App() {
   function onChange(value) {
     return value;
   }
+  function onClick(value) {
+    return value;
+  }
   return /*#__PURE__*/_react.default.createElement(DatePickerContainer, null, /*#__PURE__*/_react.default.createElement(_DatePicker.default, {
-    onChange: onChange
+    onChange: onChange,
+    onClick: onClick
   }));
 }

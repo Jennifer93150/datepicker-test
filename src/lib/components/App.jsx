@@ -9,12 +9,18 @@ const DatePickerContainer = styled.main`
 `;
 
 export default function App() {
+
   function onChange(value) {
-    return value
+    return value;
   }
+
+  function onClick(value) {
+    return value;
+  }
+
   return (
     <DatePickerContainer>
-      <DatePicker onChange={onChange} />
+      <DatePicker onChange={onChange} onClick={onClick}/>
     </DatePickerContainer>
   );
 }

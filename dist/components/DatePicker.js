@@ -1,24 +1,25 @@
 "use strict";
 
-import React, {useState} from 'react';
+import React , {useState} from "react";
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = DatePicker;
+//exports.default = DatePicker;
 require("core-js/modules/web.dom-collections.iterator.js");
-//var _react = require("react");
+var _react = require("react");
 var _reactCalendar = _interopRequireDefault(require("react-calendar"));
 require("react-calendar/dist/Calendar.css");
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-const CalendarWrapper = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: absolute;\n    margin: 20px;\n    inset: 0px auto auto 0px;\n    transform: translate3d(-18px, 20px, 0px);\n"])));
+const CalendarWrapper = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: absolute;\n    margin: 20px;\n    transform: translate3d(-28px, 0px, 0px);\n"])));
 
 /**
  * Component datapicker
  */
- export default function DatePicker(props) {
+export default function DatePicker(props) {
   const [date, setDate] = (0, useState)(new Date());
   const [dateInput, setDateInput] = (0, useState)();
   const [openCalendar, setOpenCalendar] = (0, useState)(false);
@@ -38,6 +39,7 @@ const CalendarWrapper = _styledComponents.default.div(_templateObject || (_templ
     setDate(date);
     setOpenCalendar(false);
     setChangeInput(false);
+    props.onClick(date);
   };
   const handleChange = e => {
     setDateInput(e.target.value);
