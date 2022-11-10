@@ -57,6 +57,8 @@ export default function DatePicker(props) {
     return (
         <div>
             <input 
+                className={props.class}
+                id={props.id}
                 value={inputValue} 
                 type="text"
                 onClick={handleClick}

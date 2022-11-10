@@ -9,7 +9,7 @@ const DatePickerContainer = styled.main`
 `;
 
 export default function App() {
-
+  
   function onChange(value) {
     return value;
   }
@@ -18,9 +18,17 @@ export default function App() {
     return value;
   }
 
+  function setId(value) {
+    return value;
+  }
+
+  function setClassName(value) {
+    return value;
+  }
+
   return (
     <DatePickerContainer>
-      <DatePicker onChange={onChange} onClick={onClick}/>
+      <DatePicker onChange={onChange} onClick={onClick} id={setId} class={setClassName}/>
     </DatePickerContainer>
   );
 }

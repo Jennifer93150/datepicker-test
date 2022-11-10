@@ -1,7 +1,5 @@
 "use strict";
-
-import React , {useState} from "react";
-
+import React, {useState} from "react";
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55,6 +53,8 @@ export default function DatePicker(props) {
   const inputValue = dateInput && changeInput ? dateInput : todaysDateInNumbers;
   const calendarValue = dateInput && !dateInput.length < 10 && changeInput ? dateInputString : date;
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("input", {
+    className: props.class,
+    id: props.id,
     value: inputValue,
     type: "text",
     onClick: handleClick,
