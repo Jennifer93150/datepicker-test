@@ -36,12 +36,13 @@ export default function DatePicker(props) {
         setDate(date);
         setOpenCalendar(false);
         setChangeInput(false);
-        props.onClick(date);
+        props.onChange(date.toLocaleDateString());
+        
     }
 
     const handleChange = (e) => {
         setDateInput(e.target.value);
-        setChangeInput(true)
+        setChangeInput(true);
         if(e.target.value.length === 10){
             setOpenCalendar(false);
             props.onChange(e.target.value);
@@ -57,7 +58,7 @@ export default function DatePicker(props) {
     return (
         <div>
             <input 
-                className={props.class}
+                className={props.className}
                 id={props.id}
                 value={inputValue} 
                 type="text"

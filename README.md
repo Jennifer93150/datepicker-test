@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# React Date Picker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Alt text](../../Capture%20d%E2%80%99e%CC%81cran%202022-11-10%20a%CC%80%2023.44.05.png)
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+The package can be installed via [npm](https://github.com/npm/cli):
 
-### `npm start`
+```
+npm i my-datepicker-test
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Configuration
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### OnChange
 
-### `npm test`
+You can use `onChange` event handler which fires each time some calendar date has been selected
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+function handleDateChange(value) {
+  return value;
+}
 
-### `npm run build`
+<DatePicker
+  onChange={(value)=>{handleDateChange(value)}} //only when value has changed
+/>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ClassName
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can also include a className
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+const class = "my-className";
 
-### `npm run eject`
+<DatePicker
+  className={class}
+  onChange={(value)=>{handleDateChange(value)}}
+/>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Id
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can also include an id
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```js
+const id = "my-id";
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<DatePicker
+  className={class}
+  id={id}
+  onChange={handleDateChange}
+/>
+```
 
-## Learn More
+## Compatibility
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+We're always trying to stay compatible with the latest version of React. We can't support all older versions of React.
 
-### Code Splitting
+Latest compatible version:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React v16.13.0: my-datepicker-test v0.4.5 and newer
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

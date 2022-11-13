@@ -15,9 +15,6 @@ function App() {
   function onChange(value) {
     return value;
   }
-  function onClick(value) {
-    return value;
-  }
   function setId(value) {
     return value;
   }
@@ -26,8 +23,7 @@ function App() {
   }
   return /*#__PURE__*/_react.default.createElement(DatePickerContainer, null, /*#__PURE__*/_react.default.createElement(_DatePicker.default, {
     onChange: onChange,
-    onClick: onClick,
     id: setId,
-    class: setClassName
+    className: setClassName
   }));
 }

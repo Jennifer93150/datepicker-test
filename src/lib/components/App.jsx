@@ -14,10 +14,6 @@ export default function App() {
     return value;
   }
 
-  function onClick(value) {
-    return value;
-  }
-
   function setId(value) {
     return value;
   }
@@ -28,7 +24,7 @@ export default function App() {
 
   return (
     <DatePickerContainer>
-      <DatePicker onChange={onChange} onClick={onClick} id={setId} class={setClassName}/>
+      <DatePicker onChange={onChange} id={setId} className={setClassName}/>
     </DatePickerContainer>
   );
 }

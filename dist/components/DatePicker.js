@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 //exports.default = DatePicker;
 require("core-js/modules/web.dom-collections.iterator.js");
-var _react = require("react");
+//var _react = require("react");
 var _reactCalendar = _interopRequireDefault(require("react-calendar"));
 require("react-calendar/dist/Calendar.css");
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -37,7 +37,7 @@ export default function DatePicker(props) {
     setDate(date);
     setOpenCalendar(false);
     setChangeInput(false);
-    props.onClick(date);
+    props.onChange(date.toLocaleDateString());
   };
   const handleChange = e => {
     setDateInput(e.target.value);
@@ -53,7 +53,7 @@ export default function DatePicker(props) {
   const inputValue = dateInput && changeInput ? dateInput : todaysDateInNumbers;
   const calendarValue = dateInput && !dateInput.length < 10 && changeInput ? dateInputString : date;
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("input", {
-    className: props.class,
+    className: props.className,
     id: props.id,
     value: inputValue,
     type: "text",
